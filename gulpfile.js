@@ -81,7 +81,17 @@ gulp.task("html:copy", function() {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task("js:copy", function() {
+  return gulp.src("js/*js")
+  .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("html:update", ["html:copy"], function(done){
+  server.reload();
+  done();
+});
+
+gulp.task("js:update", ["js:copy"], function(done){
   server.reload();
   done();
 });
@@ -97,4 +107,5 @@ gulp.task("serve", function() {
 
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html", ["html:update"]);
+  gulp.watch('js/*.js', ["js:update"]);
 });
