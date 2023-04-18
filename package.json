@@ -4,7 +4,7 @@
   "private": true,
   "description": "Pet calculator",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "0.1.x",
+    "@htmlacademy/editorconfig-cli": "1.0.x",
     "autoprefixer": "6.7.x",
     "browser-sync": "^2.18.8",
     "css-mqpacker": "^5.0.1",
